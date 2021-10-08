@@ -1,0 +1,28 @@
+.navegation{
+    background-color: saddlebrown;
+}
+nav{
+    background-color: salmon;
+}
+
+header{
+    background-color: seagreen;
+}
+
+article{
+    background-color: purple;
+}
+
+footer{
+
+    background-color: red;
+}
+
+.cabecalhofinal{
+    background-color: sienna;
+}
+main{ 
+
+    float: left;
+
+}
