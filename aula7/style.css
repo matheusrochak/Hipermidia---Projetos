@@ -1,0 +1,13 @@
+ul li{
+    list-style: none;
+    display: inline;
+    background-color: #75676742;
+    padding: 20px;
+}
+ul li a:link{
+    color: red;
+    text-decoration: none;
+}
+ul li:hover{
+    background-image: url(Sprite_g.jpg);
+}

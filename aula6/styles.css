@@ -1,0 +1,26 @@
+ main h1{
+     font-family:fantasy;
+ }
+
+ main{
+     background-image: url(/aula6/fundo.jfif);
+     background-size: 1366px 600px;
+     height: 600px;
+ }
+
+ #artigo1{
+     background-color:blueviolet;
+ }
+
+ #artigo2{
+     background-color: chartreuse;
+ }
+
+ article{
+     text-align: center;
+     
+ }
+article p { 
+     color: crimson;
+}
+

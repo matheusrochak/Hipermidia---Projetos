@@ -1,0 +1,19 @@
+html{
+    width: 300px;
+}
+
+ul li{
+    
+    display: block;
+    background-color: #75676742;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+ul li a:link{
+    color: red;
+    text-decoration: none;
+}
+ul li:hover{
+    background-image: url(Sprite_g.jpg);
+}
