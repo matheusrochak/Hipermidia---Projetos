@@ -2,7 +2,8 @@ html,body{
     margin: 20px;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(99, 168, 247);
+    font-family: Arial, Helvetica, sans-serif;
+    
     
 
 }
@@ -79,6 +80,7 @@ html,body{
 .grid-template-2{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+   
     margin-top: 20px;
     gap: 20px;
 }
@@ -120,6 +122,9 @@ html,body{
 .artigo {
     border: groove black;
     background-color:rgba(223, 223, 223, 0.534);
+    
+    height: 350px;
+
 }
 .card{
     display: flex;
@@ -131,6 +136,10 @@ html,body{
 .morenews p{
     text-align: center;
     margin-left: 40px;
+}
+.morenews a {
+    color: black;
+    text-decoration: none;
 }
 .card{
 display: grid;
@@ -148,6 +157,9 @@ grid-template-columns: 1fr 1fr;
 }
 .mensagem dt{
     margin-left: 10px;
+}
+.mensagem a {
+    color: black;
 }
 .card-3{
     display: grid;
@@ -176,6 +188,14 @@ grid-template-columns: 1fr 1fr;
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-left: 15px;
+    color: black;
+}
+.calendar-1 h3{
+    
+    padding-left: 90px;
+}
+.calendar-1 a{
+    color: black;
 }
 .calendar-2{
     display: grid;
@@ -188,7 +208,11 @@ grid-template-columns: 1fr 1fr;
     
 }
 .anuncio1 img{
-    width: 300px;
+    
+    height: 200px;
+
+    width: 410px;
+
     
 }
 .anuncio2{
@@ -199,11 +223,13 @@ grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
 .anuncio2 img{
-    width: 300px;
     
+    width: 300px;
 }
+    
+
 .anuncio2 label{
-    margin-left: 50px;
+    padding-top: 50px;
 }
 .anuncio3{
     border: groove black;
@@ -222,7 +248,15 @@ grid-template-columns: 1fr 1fr;
 .link-footers ul li{
     display: inline;
     float: left;
+    margin-left: 5px;
 }
 .footer label{
-    padding-left: 780px;
+    padding-left: 200px;
+}
+.events{
+   
+    padding-top: 20px;
+}
+.events a{
+    color: black;
 }
