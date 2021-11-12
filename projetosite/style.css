@@ -1,0 +1,228 @@
+html,body{
+    margin: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(99, 168, 247);
+    
+
+}
+.grid-template-1{
+    display: grid;
+    grid-template-columns: 350px 2fr ;
+    grid-template-rows: 30px 2fr;
+    gap: 5px;
+}
+
+
+.lista li{
+    display: inline;
+    margin: 0px;
+    
+    
+}
+.lista li a {
+    
+    margin: 8px;
+}
+
+
+.nav1{
+    grid-column-start: 2;
+    text-align: right;
+    padding-left: 200px;
+    
+    
+}
+.nav2{
+    padding-top: 20px;
+    grid-column-start: 2;
+    padding-left: 200px;
+    text-align: right;
+}
+.nav2 label { 
+    border: 1px solid black;
+    padding: 2px;
+    margin-right: 30px;
+    background-color:#abaaaa;
+
+}
+.envio{
+    background: #abaaaa;
+    border: 1px solid black;
+    padding: 3px;
+
+}
+.nav3{
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: center ;
+    grid-column-start: 2;
+    
+}
+.nav3 li{
+    border: groove  black;
+    border-radius: 5px;
+    margin: 10px;
+    
+    padding-left: 40px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 40px;
+  
+}
+.nav3 li a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.grid-template-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 20px;
+    gap: 20px;
+}
+.titulo{
+    border: groove  black;
+    border-radius: 5px;
+    background-color: rgb(172, 172, 172);
+}
+.titulo img {
+    width: 200px;
+    padding-right: 20px;
+    margin: 0;
+
+}
+
+.menu li{
+    border: groove  black;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: left;
+    padding: 5px;
+    list-style-type: none;
+}
+.menu ul{
+    
+    padding-left: 0px;
+    
+
+}
+.popular ul{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+}
+.popular li { 
+    padding: 2px;
+}
+
+
+.artigo {
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+}
+.card{
+    display: flex;
+}
+.paragrafo{
+    text-align: left;
+    margin-left: 5px;
+}
+.morenews p{
+    text-align: center;
+    margin-left: 40px;
+}
+.card{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.card-2{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.card-2 img{
+    height: 100px;
+    width: 200px;
+    margin-left: 5px;
+}
+.mensagem dt{
+    margin-left: 10px;
+}
+.card-3{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 20px;
+}
+.noticias{
+    text-align: left;
+}
+.artigo-2{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+    margin-top: 5px;
+    
+}
+.newslatter{
+    margin-left: 15px;
+}
+.calendar{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+    margin-top: 5px;
+    
+}
+.calendar-1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 15px;
+}
+.calendar-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 15px;
+}
+.anuncio1{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+    
+}
+.anuncio1 img{
+    width: 300px;
+    
+}
+.anuncio2{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.anuncio2 img{
+    width: 300px;
+    
+}
+.anuncio2 label{
+    margin-left: 50px;
+}
+.anuncio3{
+    border: groove black;
+    background-color:rgba(223, 223, 223, 0.534);
+    margin-top: 5px;
+}
+.anuncio3 img{
+    width: 300px;
+    
+}
+.footer{
+    grid-area: footer;
+    border-top: solid 1px black;
+    margin-top: 20px;
+}
+.link-footers ul li{
+    display: inline;
+    float: left;
+}
+.footer label{
+    padding-left: 780px;
+}
