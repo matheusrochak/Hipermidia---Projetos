@@ -13,7 +13,7 @@
 
     <fieldset id="locadoradecaro">
 
-        <form action="">
+        <form action="#">
 
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome">
@@ -21,25 +21,25 @@
         <label for="numero">Telefone:</label>
         <input type="number" name="numero" id="numero"><br><br>
 
-        <label for="estado">Cidade Retirada:</label>
-        <select name="retirada" id="select_estado">
+        <label >Cidade Retirada:</label>
+        <select name="retirada" id="retirada">
         <option value="Campos">Campos dos Goytacazes-RJ</option>
         <option value="rio">Rio de Janeiro-RJ</option>
         <option value="vitoria">Vitória-ES</option>
         </select>
 
-        <label for="estado">Cidade Entrega:</label>
-        <select name="entrega" id="select_estado">
+        <label >Cidade Entrega:</label>
+        <select name="entrega" id="entrega">
         <option value="Campos">Campos dos Goytacazes-RJ</option>
         <option value="rio">Rio de Janeiro-RJ</option>
         <option value="vitoria">Vitória-ES</option>
         </select> <br><br>
 
-        <label for="dataretirada">Data retirada:</label>
-        <input type="date" name="dataretirada" id="dataretirada"><br><br>
+        <label >Data retirada:</label>
+        <input type="date" name="dataretirada" id="data_retirada"><br><br>
 
-        <label for="dataentrega">Data Devolução:</label>
-        <input type="date" name="dataentrega" id="dataentrega"><br><br>
+        <label >Data Devolução:</label>
+        <input type="date" name="dataentrega" id="data_entrega"><br><br>
 
         <label for="tipo" >Qual Carro deseja alugar?</label><br>
         <select name="tiposcar" id="tiposcar">
@@ -49,43 +49,92 @@
         </select>
         <br><br>
 
-        <input type="submit" id="submit" value="Enviar">
+        <input type="button" onclick="calculo()" value="Enviar">
     </form>
 
     </fieldset>
 
-
-        <script>
-                
-        document.getElementById("submit").onclick = function(){
-
-        var x = 0;
-
-        if (document.getElementById("retirada").value != document.getElementById("entrega").value){
-            x = 300;
-        }
-
-        var retirada = new Date (document.getElementById("retirada").value);
-        var entrada = new Date (document.getElementById("entrega").value);
-        var dia = (entrega.getTime() - retirada.getTime()) / ('000 * 3600 * 24');
-
-        if (document.getElementById("tiposcar").value == "Basico"){
-            x = x + (119 * dia);
-        }
-
-        if (document.getElementById("tiposcar").value == "Basico com AR"){
-            x = x + (199 * dia);
-        }
-
-        if (document.getElementById("tiposcar").value == "Executivo"){
-            x = x +(299 * dia);
-        }
-
-        alert("O VALOR TOTAL É:" + x)
-        }
-
-        </script>
-
 </body>
 
+
+    <script type="text/javascript">
+
+        function calculo(){
+
+            var select_entrega = document.getElementById("entrega");
+            var cidade_entrega = select_entrega.options[select_entrega.selectedIndex].value;
+
+            var select_retirada = document.getElementById("retirada");
+            var cidade_retirada = select_retirada.options[select_retirada.select_retirada].value;
+
+            var select = document.getElementById("tiposcar");
+            var tipo_carro = select.options[selectedIndex].value;
+
+            var date_retirada = new Date(document.getElementById("data_retirada").value);
+            var date_entrega = new Date(document.getElementById("data_entrega").value);
+
+            var tempo = date_entrega.getTime() - date_retirada.getTime();
+            var dias = tempo/(1000*60*60*24);
+
+
+
+            var valor_final;
+
+            if(cidade_retirada == cidade_entrega){
+            if(tipo_carro == "tipo1"){
+                if(dias == 0){
+                    valor_final = 119*1;
+                }else{
+                    valor_final = 119*dias;
+                }
+                
+            }else{
+                if(tipo_carro == "tipo2"){
+                    if(dias == 0){
+                        valor_final = 199*1;
+                    }else{
+                        valor_final = 199*dias;
+                    }
+                    
+                }else{
+                    if(dias == 0){
+                        valor_final = 299 * 1;
+                    }else{
+                        valor_final = 299*dias;
+                    }
+                    
+                }
+            }
+        }else{
+            if(tipo_carro == "tipo1"){
+                if(dias == 0){
+                    valor_final = 300 + (119 * 1);
+                }else{
+                    valor_final = 300 + (119 * dias);
+                }
+                
+            }else{
+                if(tipo_carro == "tipo2"){
+                    if(dias == 0){
+                        valor_final = 300 + (199 * 1);
+                    }else{
+                        valor_final = 300 + (199 * dias);
+                    }
+                    
+                }else{
+                    if(dias == 0){
+                        valor_final = 300 + (299 * 1);
+                    }else{
+                        valor_final = 300 + (299 * dias);
+                    }
+                    
+                }
+            }
+        }
+            
+            
+           
+            alert("valor final é:" + valor_final);
+    }
+    </script>
 </html>
