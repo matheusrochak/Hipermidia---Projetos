@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Matheus Silva Rocha" />
+    <meta  name="description" content="PROVA P2" />
+   
+
+</head>
+
+<body>
+
+    <fieldset id="locadoradecaro">
+
+        <form action="">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label for="numero">Telefone:</label>
+        <input type="number" name="numero" id="numero"><br><br>
+
+        <label for="estado">Cidade Retirada:</label>
+        <select name="retirada" id="select_estado">
+        <option value="Campos">Campos dos Goytacazes-RJ</option>
+        <option value="rio">Rio de Janeiro-RJ</option>
+        <option value="vitoria">Vitória-ES</option>
+        </select>
+
+        <label for="estado">Cidade Entrega:</label>
+        <select name="entrega" id="select_estado">
+        <option value="Campos">Campos dos Goytacazes-RJ</option>
+        <option value="rio">Rio de Janeiro-RJ</option>
+        <option value="vitoria">Vitória-ES</option>
+        </select> <br><br>
+
+        <label for="dataretirada">Data retirada:</label>
+        <input type="date" name="dataretirada" id="dataretirada"><br><br>
+
+        <label for="dataentrega">Data Devolução:</label>
+        <input type="date" name="dataentrega" id="dataentrega"><br><br>
+
+        <label for="tipo" >Qual Carro deseja alugar?</label><br>
+        <select name="tiposcar" id="tiposcar">
+            <option value="Basico">Básico (R$ 119,00) </option>
+            <option value="Basico com AR">Básico com Ar (R$ 199,00)</option>
+            <option value="Executivo">Executivo(R$ 299,00)</option>
+        </select>
+        <br><br>
+
+        <input type="submit" id="submit" value="Enviar">
+    </form>
+
+    </fieldset>
+
+
+        <script>
+                
+        document.getElementById("submit").onclick = function(){
+
+        var x = 0;
+
+        if (document.getElementById("retirada").value != document.getElementById("entrega").value){
+            x = 300;
+        }
+
+        var retirada = new Date (document.getElementById("retirada").value);
+        var entrada = new Date (document.getElementById("entrega").value);
+        var dia = (entrega.getTime() - retirada.getTime()) / ('000 * 3600 * 24');
+
+        if (document.getElementById("tiposcar").value == "Basico"){
+            x = x + (119 * dia);
+        }
+
+        if (document.getElementById("tiposcar").value == "Basico com AR"){
+            x = x + (199 * dia);
+        }
+
+        if (document.getElementById("tiposcar").value == "Executivo"){
+            x = x +(299 * dia);
+        }
+
+        alert("O VALOR TOTAL É:" + x)
+        }
+
+        </script>
+
+</body>
+
+</html>
