@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="author" content="Matheus Silva Rocha" />
+        <meta  name="description" content="validar email" />
+	</head>
+	<body>
+
+		<script>
+			let email = prompt('Digite um e-mail')
+			email = email.toString()
+			if(validarEmail(email) == false){
+				alert('e-mail inválido!')
+			}
+			else{
+				alert('e-mail válido!')
+			}
+
+			function validarEmail(email){
+				if(email.search(' ') == true){
+					return false
+				}
+				if( (email.search('@') != -1) && ((email.search('.com') != -1)  ||  (email.search('.net') != -1) || (email.search('.edu.br') != -1)) ){
+					return true
+				} else{
+					return false
+				}
+			}
+		</script>
+	</body>
+</html>
